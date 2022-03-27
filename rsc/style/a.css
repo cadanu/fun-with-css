@@ -1,0 +1,76 @@
+
+body {
+
+}
+
+main {
+
+}
+
+p {
+    font-size: 0.8em;
+}
+
+legend {
+    font-size: 1.2em;
+}
+
+.box {
+    position: relative;
+    padding: 10px 30px;
+    margin: 2px;
+}
+
+.box1 {
+    /* background-color: firebrick; */
+    background-color: white;
+    max-width: 500px;
+    margin-bottom: +20px;
+}
+
+.box2 {
+    background-color: rgb(24, 22, 22);
+    color: burlywood;
+    margin: -10px 0 0 3%;
+    max-width: 624px;
+    padding: 20px 40px;
+
+    box-shadow: 0 0 20px 5px goldenrod;
+
+    z-index: 1000;
+}
+
+.box2 .inner-box {
+    background-color: rgba(112, 208, 221, 0.76);
+    color: black;
+    max-width: 80%;
+    padding: 1px 10px;
+    margin-left: 20px;
+}
+
+.box2 .inner-box.first {
+    background-color: indianred;
+    margin-left: 0;
+    color: whitesmoke
+}
+
+.box2 .inner-box.secondary {
+    margin-top: -5px;
+
+    z-index: -300;
+}
+
+
+
+.box3 {
+    background-color: antiquewhite;
+    outline: 1px solid black;
+    margin-top: -10px;
+    max-width: 750px;
+
+    box-shadow: 10px 12px 3px;
+
+    z-index: -1000;
+}
+
+
