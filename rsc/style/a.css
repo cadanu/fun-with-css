@@ -1,10 +1,9 @@
 
 body {
-
 }
 
 main {
-
+    position: relative;
 }
 
 p {
@@ -21,11 +20,43 @@ legend {
     margin: 2px;
 }
 
+*:hover {
+    z-index: 2000;
+    transition: ease-in-out 1s;
+}
+
+.box.box1 {
+    min-width: 101%;
+}
+
 .box1 {
     /* background-color: firebrick; */
     background-color: white;
     max-width: 500px;
-    margin-bottom: +20px;
+    margin: 0 0 +20px -24px;
+    /* padding-left: +64px; */
+}
+
+.box1:hover {
+    background: repeating-linear-gradient(
+        270deg,
+        /* transparent, */
+        /* transparent 10px, */
+        /* red 30px, */
+        /* transparent 10px, */
+        red 10px,
+        /* red 10px, */
+        transparent
+    );
+    /* border-bottom: 5px ridge black; */
+    margin-bottom: +40px;
+}
+
+.box.box1 h1 {
+    color: white;
+    font-size: 2em;
+    text-shadow: 1px 1px 2px black;
+    margin-left: 20px;
 }
 
 .box2 {
@@ -41,26 +72,32 @@ legend {
 }
 
 .box2 .inner-box {
-    background-color: rgba(112, 208, 221, 0.76);
-    color: black;
+    background-color: rgb(58, 149, 161);
+    color: whitesmoke;
     max-width: 80%;
-    padding: 1px 10px;
+    padding: 1px 20px;
     margin-left: 20px;
+    opacity: 0.85;
+}
+
+/* .box.inner-box h1, .box.inner-box h2, .box.inner-box h3 {
+    opacity: 1;
+} */
+
+.box2 .inner-box:hover {
+    padding: +20px +40px;
+    opacity: 1;
 }
 
 .box2 .inner-box.first {
-    background-color: indianred;
+    background-color: rgb(205, 92, 92);
     margin-left: 0;
     color: whitesmoke
 }
 
 .box2 .inner-box.secondary {
     margin-top: -5px;
-
-    z-index: -300;
 }
-
-
 
 .box3 {
     background-color: antiquewhite;
@@ -70,7 +107,12 @@ legend {
 
     box-shadow: 10px 12px 3px;
 
-    z-index: -1000;
+    /* z-index: 5000; */
+}
+
+.box.box3:hover {
+    padding: +20px +60px;
+
 }
 
 
