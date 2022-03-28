@@ -1,5 +1,11 @@
 
+*:hover {
+    z-index: 2000;
+    transition: all 1s;
+}
+
 body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 main {
@@ -10,19 +16,28 @@ p {
     font-size: 0.8em;
 }
 
-legend {
-    font-size: 1.2em;
+a {
+    text-decoration: none;
+    color: black;
 }
+
+a:hover {
+    color: rgba(46, 34, 34, 0.514);
+    transition: ease 0.3s;
+}
+
+h1, h2, h3, p {
+    cursor: default;
+}
+
+/* legend {
+    font-size: 1.2em;
+} */
 
 .box {
     position: relative;
     padding: 10px 30px;
     margin: 2px;
-}
-
-*:hover {
-    z-index: 2000;
-    transition: ease-in-out 1s;
 }
 
 .box.box1 {
@@ -33,23 +48,31 @@ legend {
     /* background-color: firebrick; */
     background-color: white;
     max-width: 500px;
-    margin: 0 0 +20px -24px;
-    /* padding-left: +64px; */
+    margin: -50px 0 +20px -24px;
+
+    background: url(../media/splotch.png);
+    background-repeat: no-repeat;
+    background-position: 0 -20px;
 }
 
-.box1:hover {
+.box .box.inner-box.overlay {
+    margin-left: -20px;
+    min-width: 101%;
+}
+
+.box1 .box.inner-box.overlay:hover {
     background: repeating-linear-gradient(
-        270deg,
+        180deg,
         /* transparent, */
         /* transparent 10px, */
         /* red 30px, */
         /* transparent 10px, */
-        red 10px,
-        /* red 10px, */
+        rgba(255, 0, 0, 0.075) 0,
         transparent
     );
-    /* border-bottom: 5px ridge black; */
+    /* margin-left: -20px; */
     margin-bottom: +40px;
+
 }
 
 .box.box1 h1 {
@@ -59,40 +82,75 @@ legend {
     margin-left: 20px;
 }
 
+.box.box1 nav {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    gap: 50px;
+
+    border-radius: 0 0 10px 10px;
+
+    /* background-color: rgba(0, 0, 0, 0.411); */
+    background: repeating-linear-gradient(
+        rgba(0, 0, 0, 0.555),
+        transparent
+    );
+    max-width: 600px;
+    margin: -30px 0 0 0;
+    padding: 10px 0;
+}
+
+.box.box1 nav:hover {
+    padding-bottom: +20px;
+}
+
+.box.box1 nav a {
+    color: white;
+    font-size: 1em;
+    /* padding: 5px; */
+}
+
+.box.box1 nav a:hover {
+    color: rgb(255, 226, 226);
+    transition: ease 0.3s;
+}
+
 .box2 {
     background-color: rgb(24, 22, 22);
     color: burlywood;
     margin: -10px 0 0 3%;
     max-width: 624px;
     padding: 20px 40px;
+    border-radius: 10px;
 
-    box-shadow: 0 0 20px 5px goldenrod;
+    box-shadow: 0 0 20px 1px goldenrod;
 
     z-index: 1000;
 }
 
 .box2 .inner-box {
+    outline: 1px solid white;
     background-color: rgb(58, 149, 161);
-    color: whitesmoke;
+    color: rgba(245, 245, 245, 0.692);
     max-width: 80%;
     padding: 1px 20px;
     margin-left: 20px;
-    opacity: 0.85;
 }
 
-/* .box.inner-box h1, .box.inner-box h2, .box.inner-box h3 {
-    opacity: 1;
-} */
+.box .inner-box p {
+    margin-top: -15px;
+}
 
 .box2 .inner-box:hover {
-    padding: +20px +40px;
-    opacity: 1;
+    color: whitesmoke;
+    box-shadow: 1px 1px 10px 1px;
+    margin-left: -10px;
+    max-width: 95%;
+    padding: +3px +20px +20px +40px;
 }
 
 .box2 .inner-box.first {
     background-color: rgb(205, 92, 92);
-    margin-left: 0;
-    color: whitesmoke
 }
 
 .box2 .inner-box.secondary {
@@ -104,15 +162,13 @@ legend {
     outline: 1px solid black;
     margin-top: -10px;
     max-width: 750px;
+    border-radius: 0 0 10px 10px;
 
     box-shadow: 10px 12px 3px;
-
-    /* z-index: 5000; */
 }
 
 .box.box3:hover {
     padding: +20px +60px;
-
 }
 
 
